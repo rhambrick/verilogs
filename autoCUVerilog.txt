@@ -1,0 +1,202 @@
+/*
+  Auto Element Usage Report
+    Input - 8 times
+    AndGate - 88 times
+    NorGate - 32 times
+    Output - 4 times
+    NotGate - 24 times
+*/
+
+// Sample Testbench Code - Uncomment to use
+
+/*
+module TestBench();
+
+  reg inp_0, inp_1, inp_2, inp_3, inp_4, inp_5, inp_6, inp_7;
+
+  wire out_0, out_1, out_2, out_3;
+
+  Main DUT0(out_0, out_1, out_2, out_3, inp_0, inp_1, inp_2, inp_3, inp_4, inp_5, inp_6, inp_7);
+
+  initial begin
+    inp_0 = 0;
+    inp_1 = 0;
+    inp_2 = 0;
+    inp_3 = 0;
+    inp_4 = 0;
+    inp_5 = 0;
+    inp_6 = 0;
+    inp_7 = 0;
+
+    #15
+    $display("out_0 = %b", out_0);
+    $display("out_1 = %b", out_1);
+    $display("out_2 = %b", out_2);
+    $display("out_3 = %b", out_3);
+
+    #10
+    $display("out_0 = %b", out_0);
+    $display("out_1 = %b", out_1);
+    $display("out_2 = %b", out_2);
+    $display("out_3 = %b", out_3);
+
+    $finish;
+
+  end
+endmodule
+
+*/
+
+module Main(out_0, out_1, out_2, out_3, inp_0, inp_1, inp_2, inp_3, inp_4, inp_5, inp_6, inp_7);
+  output out_0,  out_1,  out_2,  out_3;
+  input inp_0, inp_1, inp_2, inp_3, inp_4, inp_5, inp_6, inp_7;
+  wire and_36_out, nor_29_out, nor_28_out, and_70_out, and_86_out, not_22_out, and_37_out, and_28_out, nor_21_out, nor_20_out, and_66_out, not_18_out, and_29_out, and_20_out, nor_13_out, nor_12_out, and_62_out, not_14_out, and_21_out, and_12_out, nor_5_out, nor_4_out, and_58_out, not_10_out, and_13_out, and_38_out, nor_31_out, nor_30_out, and_71_out, and_87_out, not_23_out, and_39_out, and_30_out, nor_23_out, nor_22_out, and_67_out, not_19_out, and_31_out, and_22_out, nor_15_out, nor_14_out, and_63_out, not_15_out, and_23_out, and_14_out, nor_7_out, nor_6_out, and_59_out, not_11_out, and_15_out, and_34_out, nor_27_out, nor_26_out, and_69_out, and_85_out, not_21_out, and_35_out, and_26_out, nor_19_out, nor_18_out, and_65_out, not_17_out, and_27_out, and_18_out, nor_11_out, nor_10_out, and_61_out, not_13_out, and_19_out, and_10_out, nor_3_out, nor_2_out, and_57_out, not_9_out, and_11_out, and_32_out, nor_25_out, nor_24_out, and_68_out, and_84_out, not_20_out, and_33_out, and_24_out, nor_17_out, nor_16_out, and_64_out, not_16_out, and_25_out, and_16_out, nor_9_out, nor_8_out, and_60_out, not_12_out, and_17_out, and_8_out, nor_1_out, nor_0_out, and_56_out, not_8_out, and_9_out, not_5_out, and_4_out, and_43_out, and_42_out, and_41_out, and_40_out, not_6_out, and_5_out, and_47_out, and_46_out, and_45_out, and_44_out, and_6_out, and_51_out, and_50_out, and_49_out, and_48_out, and_7_out, and_55_out, and_54_out, and_53_out, and_52_out, not_4_out, not_7_out, not_3_out, and_2_out, not_0_out, and_0_out, and_1_out, and_3_out, not_2_out, not_1_out;
+  assign and_36_out = and_54_out & inp_7;
+  assign nor_29_out = ~(nor_28_out | and_36_out);
+  assign nor_28_out = ~(and_37_out | nor_29_out);
+  assign and_70_out = and_2_out & nor_28_out;
+  assign and_86_out = and_7_out & and_70_out;
+  assign out_2 = and_86_out;
+  assign not_22_out = ~inp_7;
+  assign and_37_out = not_22_out & and_54_out;
+  assign and_28_out = and_50_out & inp_7;
+  assign nor_21_out = ~(nor_20_out | and_28_out);
+  assign nor_20_out = ~(and_29_out | nor_21_out);
+  assign and_66_out = and_2_out & nor_20_out;
+  assign and_86_out = and_6_out & and_66_out;
+  assign not_18_out = ~inp_7;
+  assign and_29_out = not_18_out & and_50_out;
+  assign and_20_out = and_46_out & inp_7;
+  assign nor_13_out = ~(nor_12_out | and_20_out);
+  assign nor_12_out = ~(and_21_out | nor_13_out);
+  assign and_62_out = and_2_out & nor_12_out;
+  assign and_86_out = and_5_out & and_62_out;
+  assign not_14_out = ~inp_7;
+  assign and_21_out = not_14_out & and_46_out;
+  assign and_12_out = and_42_out & inp_7;
+  assign nor_5_out = ~(nor_4_out | and_12_out);
+  assign nor_4_out = ~(and_13_out | nor_5_out);
+  assign and_58_out = and_2_out & nor_4_out;
+  assign and_86_out = and_4_out & and_58_out;
+  assign not_10_out = ~inp_7;
+  assign and_13_out = not_10_out & and_42_out;
+  assign and_38_out = and_55_out & inp_6;
+  assign nor_31_out = ~(nor_30_out | and_38_out);
+  assign nor_30_out = ~(and_39_out | nor_31_out);
+  assign and_71_out = and_2_out & nor_30_out;
+  assign and_87_out = and_7_out & and_71_out;
+  assign out_3 = and_87_out;
+  assign not_23_out = ~inp_6;
+  assign and_39_out = not_23_out & and_55_out;
+  assign and_30_out = and_51_out & inp_6;
+  assign nor_23_out = ~(nor_22_out | and_30_out);
+  assign nor_22_out = ~(and_31_out | nor_23_out);
+  assign and_67_out = and_2_out & nor_22_out;
+  assign and_87_out = and_6_out & and_67_out;
+  assign not_19_out = ~inp_6;
+  assign and_31_out = not_19_out & and_51_out;
+  assign and_22_out = and_47_out & inp_6;
+  assign nor_15_out = ~(nor_14_out | and_22_out);
+  assign nor_14_out = ~(and_23_out | nor_15_out);
+  assign and_63_out = and_2_out & nor_14_out;
+  assign and_87_out = and_5_out & and_63_out;
+  assign not_15_out = ~inp_6;
+  assign and_23_out = not_15_out & and_47_out;
+  assign and_14_out = and_43_out & inp_6;
+  assign nor_7_out = ~(nor_6_out | and_14_out);
+  assign nor_6_out = ~(and_15_out | nor_7_out);
+  assign and_59_out = and_2_out & nor_6_out;
+  assign and_87_out = and_4_out & and_59_out;
+  assign not_11_out = ~inp_6;
+  assign and_15_out = not_11_out & and_43_out;
+  assign and_34_out = and_53_out & inp_5;
+  assign nor_27_out = ~(nor_26_out | and_34_out);
+  assign nor_26_out = ~(and_35_out | nor_27_out);
+  assign and_69_out = and_2_out & nor_26_out;
+  assign and_85_out = and_7_out & and_69_out;
+  assign out_1 = and_85_out;
+  assign not_21_out = ~inp_5;
+  assign and_35_out = not_21_out & and_53_out;
+  assign and_26_out = and_49_out & inp_5;
+  assign nor_19_out = ~(nor_18_out | and_26_out);
+  assign nor_18_out = ~(and_27_out | nor_19_out);
+  assign and_65_out = and_2_out & nor_18_out;
+  assign and_85_out = and_6_out & and_65_out;
+  assign not_17_out = ~inp_5;
+  assign and_27_out = not_17_out & and_49_out;
+  assign and_18_out = and_45_out & inp_5;
+  assign nor_11_out = ~(nor_10_out | and_18_out);
+  assign nor_10_out = ~(and_19_out | nor_11_out);
+  assign and_61_out = and_2_out & nor_10_out;
+  assign and_85_out = and_5_out & and_61_out;
+  assign not_13_out = ~inp_5;
+  assign and_19_out = not_13_out & and_45_out;
+  assign and_10_out = and_41_out & inp_5;
+  assign nor_3_out = ~(nor_2_out | and_10_out);
+  assign nor_2_out = ~(and_11_out | nor_3_out);
+  assign and_57_out = and_2_out & nor_2_out;
+  assign and_85_out = and_4_out & and_57_out;
+  assign not_9_out = ~inp_5;
+  assign and_11_out = not_9_out & and_41_out;
+  assign and_32_out = and_52_out & inp_4;
+  assign nor_25_out = ~(nor_24_out | and_32_out);
+  assign nor_24_out = ~(and_33_out | nor_25_out);
+  assign and_68_out = and_2_out & nor_24_out;
+  assign and_84_out = and_7_out & and_68_out;
+  assign out_0 = and_84_out;
+  assign not_20_out = ~inp_4;
+  assign and_33_out = not_20_out & and_52_out;
+  assign and_24_out = and_48_out & inp_4;
+  assign nor_17_out = ~(nor_16_out | and_24_out);
+  assign nor_16_out = ~(and_25_out | nor_17_out);
+  assign and_64_out = and_2_out & nor_16_out;
+  assign and_84_out = and_6_out & and_64_out;
+  assign not_16_out = ~inp_4;
+  assign and_25_out = not_16_out & and_48_out;
+  assign and_16_out = and_44_out & inp_4;
+  assign nor_9_out = ~(nor_8_out | and_16_out);
+  assign nor_8_out = ~(and_17_out | nor_9_out);
+  assign and_60_out = and_2_out & nor_8_out;
+  assign and_84_out = and_5_out & and_60_out;
+  assign not_12_out = ~inp_4;
+  assign and_17_out = not_12_out & and_44_out;
+  assign and_8_out = and_40_out & inp_4;
+  assign nor_1_out = ~(nor_0_out | and_8_out);
+  assign nor_0_out = ~(and_9_out | nor_1_out);
+  assign and_56_out = and_2_out & nor_0_out;
+  assign and_84_out = and_4_out & and_56_out;
+  assign not_8_out = ~inp_4;
+  assign and_9_out = not_8_out & and_40_out;
+  assign not_5_out = ~inp_3;
+  assign and_4_out = not_5_out & not_4_out;
+  assign and_43_out = and_3_out & and_4_out;
+  assign and_42_out = and_3_out & and_4_out;
+  assign and_41_out = and_3_out & and_4_out;
+  assign and_40_out = and_3_out & and_4_out;
+  assign not_6_out = ~inp_3;
+  assign and_5_out = not_6_out & inp_2;
+  assign and_47_out = and_3_out & and_5_out;
+  assign and_46_out = and_3_out & and_5_out;
+  assign and_45_out = and_3_out & and_5_out;
+  assign and_44_out = and_3_out & and_5_out;
+  assign and_6_out = inp_3 & not_7_out;
+  assign and_51_out = and_3_out & and_6_out;
+  assign and_50_out = and_3_out & and_6_out;
+  assign and_49_out = and_3_out & and_6_out;
+  assign and_48_out = and_3_out & and_6_out;
+  assign and_7_out = inp_3 & inp_2;
+  assign and_55_out = and_3_out & and_7_out;
+  assign and_54_out = and_3_out & and_7_out;
+  assign and_53_out = and_3_out & and_7_out;
+  assign and_52_out = and_3_out & and_7_out;
+  assign not_4_out = ~inp_2;
+  assign not_7_out = ~inp_2;
+  assign not_3_out = ~inp_1;
+  assign and_2_out = inp_0 & not_3_out;
+  assign not_0_out = ~inp_1;
+  assign and_0_out = not_1_out & not_0_out;
+  assign and_1_out = not_2_out & inp_1;
+  assign and_3_out = inp_0 & inp_1;
+  assign not_2_out = ~inp_0;
+  assign not_1_out = ~inp_0;
+endmodule
